@@ -13,6 +13,9 @@ pack.setup("sylvee.plugins")
 require("catppuccin").setup({
     flavour = "mocha",
     auto_integrations = true,
+    integrations = {
+        fzf = true,
+    },
 })
 
 vim.cmd.colorscheme("catppuccin")
