@@ -33,6 +33,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end,
 })
 
+vim.lsp.config('*', {
+    on_attach = function(client, bufnr)
+        do
+            local ok, navic = pcall(require, "nvim-navic")
+            if not ok then
+                return
+            end
+            navic.attach(client, bufnr)
+        end
+    end
+})
+
 vim.api.nvim_create_autocmd('BufWritePre', {
     group = vim.api.nvim_create_augroup('lsp:autoformat', {}),
     callback = function()

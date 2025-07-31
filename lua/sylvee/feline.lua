@@ -76,7 +76,7 @@ local view = {
 }
 
 local function is_enabled(min_width)
-    return vim.api.nvim_win_get_width(0) > min_width
+    return function() return vim.api.nvim_win_get_width(0) > min_width end
 end
 
 local is_lsp_in_excluded_list = function(lsp_name)
@@ -509,6 +509,58 @@ function M.get_winbar()
             str = assets.right_separator,
             hl = {
                 fg = C.lavender,
+                bg = C.mantle,
+            },
+        },
+    })
+
+    table.insert(components.active[1], {
+        provider = function()
+            local ok, navic = pcall(require, "nvim-navic")
+            if not ok then
+                return
+            end
+            return " " .. navic.get_location() .. " "
+        end,
+        enabled = function()
+            local ok, navic = pcall(require, "nvim-navic")
+            if not ok then
+                return false
+            end
+            return is_enabled(40)() and navic.is_available()
+        end,
+        hl = {
+            fg = C.lavender,
+            bg = C.mantle
+        },
+        right_sep = {
+            str = assets.right_separator,
+            hl = {
+                fg = C.mantle,
+                bg = sett.bkg,
+            },
+        },
+    })
+
+    table.insert(components.active[1], {
+        provider = function()
+            return " "
+        end,
+        enabled = function()
+            local ok, navic = pcall(require, "nvim-navic")
+            if not ok then
+                return false
+            end
+            return not is_enabled(40)() or not navic.is_available()
+        end,
+        hl = {
+            fg = C.text,
+            bg = C.mantle,
+        },
+        right_sep = {
+            str = assets.right_separator,
+            hl = {
+                fg = C.mantle,
                 bg = sett.bkg,
             },
         },
