@@ -6,6 +6,8 @@ return {
     "nvim-lua/plenary.nvim",
     -- ui lib
     "MunifTanjim/nui.nvim",
+    -- async lib
+    "nvim-neotest/nvim-nio",
 
     -- theme
     { "catppuccin/nvim", name = "catppuccin" },
@@ -22,6 +24,7 @@ return {
     { "echasnovski/mini.surround", event = "BufRead" },
     { "echasnovski/mini.files", event = "BufRead" },
 
+    { "comfysage/mossy.nvim", name = "mossy" },
     { "mfussenegger/nvim-lint", event = "BufReadPre" },
 
     { "SmiteshP/nvim-navic", event = "BufReadPre" },
