@@ -72,7 +72,7 @@ vim.o.updatetime = 250
 vim.o.termguicolors = true
 
 -- use rounded border for floating windows
-vim.o.winborder = 'rounded'
+vim.o.winborder = "rounded"
 
 -- decrease mapped sequence wait time
 vim.o.timeout = false
@@ -114,4 +114,3 @@ vim.opt.spelloptions:append("noplainbuffer")
 
 -- show listchars
 vim.opt.list = true
-

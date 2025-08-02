@@ -8,23 +8,23 @@ return {
     "MunifTanjim/nui.nvim",
 
     -- theme
-    { "catppuccin/nvim",             name = "catppuccin" },
+    { "catppuccin/nvim", name = "catppuccin" },
 
     -- ui
-    { "feline-nvim/feline.nvim",     event = "UIEnter" },
+    { "feline-nvim/feline.nvim", event = "UIEnter" },
     { "nvim-neo-tree/neo-tree.nvim", event = "UIEnter" },
 
-    { "ibhagwan/fzf-lua",            event = "VimEnter" },
+    { "ibhagwan/fzf-lua", event = "VimEnter" },
 
     -- general
     "echasnovski/mini.icons",
-    { "echasnovski/mini.pairs",    event = "BufRead" },
+    { "echasnovski/mini.pairs", event = "BufRead" },
     { "echasnovski/mini.surround", event = "BufRead" },
-    { "echasnovski/mini.files",    event = "BufRead" },
+    { "echasnovski/mini.files", event = "BufRead" },
 
-    { "mfussenegger/nvim-lint",    event = "BufReadPre" },
+    { "mfussenegger/nvim-lint", event = "BufReadPre" },
 
-    { "SmiteshP/nvim-navic",       event = "BufReadPre" },
+    { "SmiteshP/nvim-navic", event = "BufReadPre" },
     { "NvChad/nvim-colorizer.lua", event = "UIEnter" },
-    { "akinsho/toggleterm.nvim",   event = "VimEnter" },
+    { "akinsho/toggleterm.nvim", event = "VimEnter" },
 }
