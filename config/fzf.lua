@@ -77,6 +77,9 @@ local opts = {
             treesitter = true,
         },
     },
+    keymaps = {
+        previewer = false,
+    },
     file_ignore_patterns = {
         "%.age",
         "%.cache",
