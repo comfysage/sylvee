@@ -20,4 +20,13 @@ require("catppuccin").setup({
 
 vim.cmd.colorscheme("catppuccin")
 
-require("sylvee.message")
+vim.api.nvim_create_autocmd("VimEnter", {
+  group = vim.api.nvim_create_augroup("sylvee:message:enter", { clear = true }),
+  once = true,
+  callback = function()
+    if vim.fn.argc() > 0 then
+      return
+    end
+    require("sylvee.message")
+  end,
+})
