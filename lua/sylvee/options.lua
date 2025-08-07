@@ -38,9 +38,15 @@ vim.o.sidescrolloff = 15
 
 -- completion window
 vim.o.pumheight = 15
+vim.o.pumwidth = 20
+vim.o.pummaxwidth = 42
 vim.opt.wildoptions = { "fuzzy", "pum", "tagfile" }
 vim.o.wildmode = "longest:full,full"
-vim.opt.completeopt = { "fuzzy", "menu", "menuone", "noinsert", "preview" }
+vim.opt.completeopt = { "menu", "menuone", "preinsert", "preview" }
+vim.o.autocomplete = true
+vim.o.complete = "o,."
+
+vim.api.nvim_set_hl(0, "ComplMatchIns", { link = "NonText", default = true })
 
 -- indentations settings
 vim.o.tabstop = 4
