@@ -59,6 +59,7 @@ theme.grep_curbuf = theme.blines
 theme.git         = { blame = { winopts = up } }
 
 local opts = {
+    fzf_colors = true,
     fzf_opts = {
         ["--layout"] = "reverse-list",
         ["--info"] = "inline-right",
