@@ -28,6 +28,5 @@ return {
     { "mfussenegger/nvim-lint", event = "BufReadPre" },
 
     { "SmiteshP/nvim-navic", event = "BufReadPre" },
-    { "NvChad/nvim-colorizer.lua", event = "UIEnter" },
     { "akinsho/toggleterm.nvim", event = "VimEnter" },
 }
